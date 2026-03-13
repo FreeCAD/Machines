@@ -1,5 +1,5 @@
 <!-- SPDX-License-Identifier: CC-BY-SA-4.0 -->
-<!-- SPDX-FileNotice: Part of the Minimal addon. -->
+<!-- SPDX-FileNotice: Part of the Machines addon.. -->
 
 # Contributing
 
@@ -22,16 +22,7 @@ How to contribute to this addon.
 
 -   Fork & clone the repository.
 
--   Using [uv], install the dev dependencies:
-
-    ```sh
-    uv sync
-    ```
-
 -   Link the cloned repository folder  
     to your FreeCAD `/Mod/` directory.
 
 <br/>
-
-
-[uv]: https://docs.astral.sh/uv/

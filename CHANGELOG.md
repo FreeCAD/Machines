@@ -1,11 +1,11 @@
 <!-- SPDX-License-Identifier: CC-BY-SA-4.0 -->
-<!-- SPDX-FileNotice: Part of the Minimal addon. -->
+<!-- SPDX-FileNotice: Part of the Machines addon.. -->
 
 # Changelog
 
 <br/>
 
-## [0.1.0] - YYYY-MM-DD
+## [1.0.0] - YYYY-MM-DD
 
 ### Fixed
 
@@ -22,4 +22,4 @@
 <br/>
 
 
-[0.1.0]: #
+[1.0.0]: #

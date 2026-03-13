@@ -1,12 +1,12 @@
 <!-- SPDX-License-Identifier: CC-BY-SA-4.0 -->
-<!-- SPDX-FileNotice: Part of the Minimal addon. -->
+<!-- SPDX-FileNotice: Part of the Machines addon.. -->
 
 # Documentation
 
 ## Usage
 
--   [How do I do X?][Usage-X]
+-   [How to create machine definitions][Definition]
 
 
 
-[Usage-X]: ./Usage/Howto-X.md
+[Definition]: ./Definition.md

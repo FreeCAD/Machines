@@ -3,8 +3,8 @@
     encoding = 'UTF-8'
     standalone = 'no'
 ?>
-<!-- SPDX-License-Identifier: LGPL-3.0-or-later -->
-<!-- SPDX-FileNotice: Part of the Minimal addon. -->
+<!-- SPDX-License-Identifier: CC-BY-SA-4.0-->
+<!-- SPDX-FileNotice: Part of the Machines addon.. -->
 <package
     format = '1'
     xmlns = 'https://wiki.freecad.org/Package_Metadata'
@@ -12,82 +12,69 @@
 
     <!--[ Versions ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <freecadmin>1.1.0</freecadmin>
+    <freecadmin>1.2.0</freecadmin>
     <pythonmin>3.11</pythonmin>
-    <version>0.1.0</version>
-    <date>2025-12-24</date>
+    <version>1.0.0</version>
+    <date>2026-03-13</date>
 
     <!--[ Dependencies ]―――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <depend
-        version_gte = '2.4.0'
-        type = 'python'
-    >numpy</depend>
-
-    <depend
-        version_gte = '0.6.70'
-        type = 'addon'
-    >Curves</depend>
-
-    <depend
         type = 'internal'
-    >draft</depend>
+    >cam</depend>
 
     <!--[ Info ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <description>Addon example that's easy to make your own.</description>
-    <name>Minimal</name>
+    <description>Collection of CAM machine definitions.</description>
+    <name>Machines</name>
 
     <!--[ Tags ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <tag>Template</tag>
-    <tag>Minimal</tag>
-    <tag>Example</tag>
+    <tag>Collection</tag>
+    <tag>Definition</tag>
+    <tag>Machine</tag>
+    <tag>CAM</tag>
 
     <!--[ Maintainers ]――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <maintainer
-        email = 'PhoneDroid.FGL@proton.me'
-    >PhoneDroid</maintainer>
+        email = 'shopinthewoods@gmail.com'
+    >Sliptonic</maintainer>
 
     <!--[ Authors ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <author
-        email = 'PhoneDroid.FGL@proton.me'
-    >PhoneDroid</author>
+        email = 'shopinthewoods@gmail.com'
+    >Sliptonic</author>
 
     <!--[ Licenses ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <license
-        file = 'LICENSE-Code'
-    >LGPL-3.0-or-later</license>
-
-    <license
-        file = 'LICENSE-Assets'
+        file = 'LICENSE'
     >CC-BY-SA-4.0</license>
 
     <!--[ Icon ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
-    <icon>freecad/Minimal/Resources/Icons/Logo.svg</icon>
+    <icon>Resources/Icons/Logo.svg</icon>
 
     <!--[ Urls ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <url
         type = 'documentation'
-    >https://github.com/FreeCAD/Addon-Template/tree/Latest/Documentation</url>
+    >https://github.com/FreeCAD/Machines/tree/Latest/Documentation</url>
 
     <url
         branch = 'Latest'
         type = 'repository'
-    >https://github.com/FreeCAD/Addon-Template</url>
+    >https://github.com/FreeCAD/Machines</url>
 
     <url
         type = 'bugtracker'
-    >https://github.com/FreeCAD/Addon-Template/issues</url>
+    >https://github.com/FreeCAD/Machines/issues</url>
 
     <url
         type = 'readme'
-    >https://raw.githubusercontent.com/FreeCAD/Addon-Template/refs/heads/Latest/Resources/Documents/Overview.md</url>
+    >https://raw.githubusercontent.com/FreeCAD/Machines/refs/heads/Latest/Resources/Documents/Overview.md</url>
 
     <!--[ Content ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
