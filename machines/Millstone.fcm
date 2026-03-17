@@ -1,0 +1,222 @@
+{
+    "freecad_version": "1.2.0",
+    "machine": {
+        "axes": {
+            "A": {
+                "allow_flip": true,
+                "joint": [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        1.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "limits": {
+                    "max": 90.0,
+                    "min": 0.0
+                },
+                "max_velocity": 4500.0,
+                "parent": "X",
+                "role": "table_rotary",
+                "sequence": 0,
+                "solution_preference": "shortest",
+                "type": "rotary"
+            },
+            "C": {
+                "allow_flip": true,
+                "joint": [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "limits": {
+                    "max": 360,
+                    "min": -360
+                },
+                "max_velocity": 36000,
+                "parent": "A",
+                "role": "table_rotary",
+                "sequence": 0,
+                "solution_preference": "shortest",
+                "type": "rotary"
+            },
+            "X": {
+                "joint": [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        1.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "limits": {
+                    "max": 1000,
+                    "min": 0
+                },
+                "max_velocity": 84.58,
+                "parent": "Y",
+                "role": "table_linear",
+                "sequence": 0,
+                "type": "linear"
+            },
+            "Y": {
+                "joint": [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0
+                    ]
+                ],
+                "limits": {
+                    "max": 1000,
+                    "min": 0
+                },
+                "max_velocity": 84.58,
+                "parent": null,
+                "role": "table_linear",
+                "sequence": 0,
+                "type": "linear"
+            },
+            "Z": {
+                "joint": [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "limits": {
+                    "max": 1000,
+                    "min": 0
+                },
+                "max_velocity": 84.58,
+                "parent": "Y",
+                "role": "table_linear",
+                "sequence": 0,
+                "type": "linear"
+            }
+        },
+        "description": "Bridgeport clone with LinuxCNC retrofit control",
+        "kinematics": {
+            "base_frame": {
+                "orientation_quaternion": [
+                    0,
+                    0,
+                    0,
+                    1.0
+                ],
+                "origin": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "dwo_supported": false,
+            "notes": "",
+            "tcp_supported": false
+        },
+        "manufacturer": "Supermax",
+        "name": "Millstone",
+        "toolheads": [
+            {
+                "coolant_delay": 0.0,
+                "coolant_flood": false,
+                "coolant_mist": false,
+                "id": "spindle1",
+                "max_power_kw": 3.0,
+                "max_rpm": 24000,
+                "min_rpm": 6000,
+                "name": "Spindle 1",
+                "tool_change": "manual",
+                "toolhead_type": "rotary",
+                "toolhead_wait": 0.0
+            }
+        ],
+        "units": "metric"
+    },
+    "output": {
+        "comments": {
+            "enabled": true,
+            "include_blank_lines": true,
+            "include_operation_labels": false,
+            "output_bcnc_comments": false,
+            "symbol": "("
+        },
+        "duplicates": {
+            "commands": true,
+            "parameters": true
+        },
+        "formatting": {
+            "command_space": " ",
+            "end_of_line_chars": "\n",
+            "line_increment": 10,
+            "line_number_prefix": "N",
+            "line_number_start": 100,
+            "line_numbers": false
+        },
+        "header": {
+            "include_date": true,
+            "include_description": true,
+            "include_document_name": true,
+            "include_fixture_list": true,
+            "include_machine_name": true,
+            "include_project_file": true,
+            "include_tool_list": true,
+            "include_units": true,
+            "output_header": true
+        },
+        "output_tool_length_offset": true,
+        "precision": {
+            "axis": 3,
+            "feed": 3,
+            "spindle": 0
+        },
+        "remote_post": false,
+        "units": "metric"
+    },
+    "postprocessor": {
+        "file_name": "linuxcnc",
+        "properties": {
+            "file_extension": "nc",
+            "post_rotary_move": "G55.4",
+            "pre_rotary_move": "G53 G0 Z0\nG53 G0 X300 Y-210",
+            "pre_tool_change": "G53 G0 Z0\nG53 G0 X300 Y-210 ",
+            "preamble": "G17 G54 G40 G49 G80 G90"
+        }
+    },
+    "processing": {
+        "early_tool_prep": true,
+        "filter_inefficient_moves": false,
+        "split_arcs": false,
+        "tool_change": true,
+        "translate_rapid_moves": false,
+        "xy_before_z_after_tool_change": false
+    },
+    "version": 1
+}
