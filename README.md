@@ -9,7 +9,6 @@
 
 </div>
 
-
 ## About
 
 Version 1.2 of FreeCAD introduced several important improvements to the CAM Workbench, notably **multi-axis operations** and **machine-based postprocessing**. 
