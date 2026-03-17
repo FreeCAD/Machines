@@ -3,19 +3,19 @@
 
 <div align="center">
 
-# Machines
-
-**CNC Machine definitions submitted by the FreeCAD community**
+# Machines: CNC Machine definitions submitted by the FreeCAD community
 
 <!-- <img width="360" src="./Resources/Media/Header.webp" alt="Machines Header" /> -->
 
 </div>
 
+
 ## About
 
-Version 1.2 of FreeCAD introduced several important improvements to the CAM Workbench, notably **multi-axis operations** and **machine-based postprocessing**. Both features require an accurate digital representation of your physical CNC machine.
+Version 1.2 of FreeCAD introduced several important improvements to the CAM Workbench, notably **multi-axis operations** and **machine-based postprocessing**. 
+Both features require an accurate digital representation of your physical CNC machine.
 
-This addon makes a curated collection of community-created machine definitions available through the FreeCAD Addon Manager.
+This addon provides a curated collection of community-created machine definitions available through the FreeCAD Addon Manager.
 
 ## Machine Definitions (.fcm)
 
@@ -32,14 +32,18 @@ Each machine definition is a JSON file with the `.fcm` extension. It contains:
 
 1. Create and test your machine definition in FreeCAD.
 2. Fork this repository.
-3. Place your `.fcm` file in the appropriate directory.
+3. Place your `.fcm` file in the appropriate directory under 'machines'.
 4. Open a Pull Request.
 
 We welcome well-tested machines!
 
-### 2) We are a company that makes CNC machines. Can we make our machine definitions available in our own addon?
+### 2) We want to make our own addon with just machines for our customers/users/students.  Can we make our machine definitions available in our own addon?
 
-**Yes!** Fork this repository, customize the branding and content, and publish it as your own addon through the FreeCAD Addon Manager.
+**Yes!** Fork this repository, customize the branding and content and curate the machines in 'machines' to your liking.  To make it available to your users, you have two choices:
+
+1) You can publish it as your own addon through the FreeCAD Addon Manager
+
+2) Provide your users the URL to the repo (github, gitlab, private, etc).  This can be added to the addon manager using the regular tools.
 
 ### 3) My machine isn't available here. How do I create it?
 
