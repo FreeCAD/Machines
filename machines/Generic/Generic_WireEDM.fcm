@@ -1,0 +1,137 @@
+{
+    "freecad_version": "1.2.0",
+    "machine": {
+        "axes": {
+            "X": {
+                "type": "linear",
+                "role": "table_linear",
+                "parent": null,
+                "sequence": 0,
+                "joint": {
+                    "origin": [0, 0, 0],
+                    "axis": [1, 0, 0]
+                },
+                "limits": {
+                    "min": 0,
+                    "max": 500
+                },
+                "max_velocity": 10000
+            },
+            "Y": {
+                "type": "linear",
+                "role": "table_linear",
+                "parent": null,
+                "sequence": 0,
+                "joint": {
+                    "origin": [0, 0, 0],
+                    "axis": [0, 1, 0]
+                },
+                "limits": {
+                    "min": 0,
+                    "max": 300
+                },
+                "max_velocity": 10000
+            },
+            "Z": {
+                "type": "linear",
+                "role": "head_linear",
+                "parent": null,
+                "sequence": 0,
+                "joint": {
+                    "origin": [0, 0, 0],
+                    "axis": [0, 0, 1]
+                },
+                "limits": {
+                    "min": 0,
+                    "max": 300
+                },
+                "max_velocity": 10000
+            }
+        },
+        "description": "Generic Wire EDM configuration. Z axis parameters are suppressed in output since wire EDM cuts in the XY plane only.",
+        "manufacturer": "",
+        "name": "Generic Wire EDM",
+        "toolheads": [
+            {
+                "id": "toolhead1",
+                "name": "Wire Guide",
+                "toolhead_type": "wire_edm",
+                "tool_change": "none",
+                "max_power_kw": 0,
+                "min_rpm": 0,
+                "max_rpm": 0,
+                "coolant_flood": true,
+                "coolant_mist": false,
+                "coolant_delay": 0.0,
+                "toolhead_wait": 0.0
+            }
+        ],
+        "units": "metric"
+    },
+    "output": {
+        "units": "metric",
+        "output_tool_length_offset": false,
+        "output_header": true,
+        "header": {
+            "include_date": true,
+            "include_description": true,
+            "include_document_name": true,
+            "include_machine_name": true,
+            "include_project_file": false,
+            "include_units": true,
+            "include_tool_list": false,
+            "include_fixture_list": false
+        },
+        "comments": {
+            "enabled": true,
+            "symbol": "(",
+            "include_operation_labels": true,
+            "include_blank_lines": false,
+            "output_bcnc_comments": false
+        },
+        "formatting": {
+            "line_numbers": false,
+            "line_number_start": 100,
+            "line_number_prefix": "N",
+            "line_increment": 10,
+            "command_space": " ",
+            "end_of_line_chars": "\n"
+        },
+        "precision": {
+            "axis": 3,
+            "feed": 3,
+            "spindle": 0
+        },
+        "duplicates": {
+            "commands": true,
+            "parameters": true
+        }
+    },
+    "postprocessor": {
+        "file_name": "generic",
+        "properties": {
+            "file_extension": "nc",
+            "supports_tool_radius_compensation": false,
+            "supported_commands": "G0\nG00\nG1\nG01\nG2\nG02\nG3\nG03\nG54\nG55\nG56\nG57\nG58\nG59\nM0\nM00\nM1\nM01\nM2\nM02\nM5\nM05\nM7\nM8\nM9\nM30",
+            "drill_cycles_to_translate": "G73\nG81\nG82\nG83",
+            "preamble": "G17 G54 G40 G49 G80 G90",
+            "postamble": "M05\nG17 G54 G90 G80 G40\nM2",
+            "safetyblock": "",
+            "pre_operation": "",
+            "post_operation": "",
+            "pre_tool_change": "M05",
+            "post_tool_change": "",
+            "parameter_order": ["X", "Y", "A", "B", "C", "I", "J", "F", "S", "T", "Q", "R", "L", "H", "D", "P"]
+        }
+    },
+    "processing": {
+        "early_tool_prep": false,
+        "filter_inefficient_moves": true,
+        "split_arcs": false,
+        "tool_change": false,
+        "translate_drill_cycles": true,
+        "translate_rapid_moves": true,
+        "xy_before_z_after_tool_change": false
+    },
+    "version": 1
+}
