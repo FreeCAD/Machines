@@ -50,8 +50,12 @@
     <!--[ Licenses ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
     <license
-        file = 'LICENSE'
+        file = 'LICENSE-Assets'
     >CC-BY-SA-4.0</license>
+
+    <license
+        file = 'LICENSE-Code'
+    >LGPL-2.1-or-later</license>
 
     <!--[ Icon ]―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――-->
 
