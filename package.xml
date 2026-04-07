@@ -81,7 +81,7 @@
 
     <content>
         <Machine>
-            <subdirectory>Resources/Community</subdirectory>
+            <subdirectory>Resources/Machines</subdirectory>
         </Machine>
     </content>
 
