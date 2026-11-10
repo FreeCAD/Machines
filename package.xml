@@ -80,9 +80,9 @@
 
 
     <content>
-        <Machine>
+        <machine>
             <subdirectory>Resources/Machines</subdirectory>
-        </Machine>
+        </machine>
     </content>
 
 </package>
