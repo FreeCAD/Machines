@@ -1,5 +1,5 @@
 {
-    "freecad_version": "1.2.0",
+    "freecad_version": "26.3.0",
     "machine": {
         "axes": {
             "X": {
@@ -89,6 +89,7 @@
             },
             "dwo_supported": false,
             "notes": "",
+            "rotation_strategy": "none",
             "tcp_supported": false
         },
         "manufacturer": "",
@@ -99,6 +100,7 @@
                 "coolant_flood": false,
                 "coolant_mist": false,
                 "id": "toolhead2",
+                "laser_wavelength": 1064.0,
                 "max_power_kw": 3.0,
                 "max_rpm": 24000,
                 "min_rpm": 6000,
@@ -181,10 +183,12 @@
         }
     },
     "processing": {
+        "assert_tool_prep": false,
         "early_tool_prep": false,
         "filter_inefficient_moves": true,
         "split_arcs": false,
-        "tool_change": true,
+        "tool_change_format": "m6_t",
+        "translate_drill_cycles": false,
         "translate_rapid_moves": false,
         "xy_before_z_after_tool_change": false
     },
