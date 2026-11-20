@@ -1,0 +1,174 @@
+{
+    "freecad_version": "26.3.0",
+    "machine": {
+        "axes": {
+            "X": {
+                "joint": [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        1.0,
+                        0.0,
+                        0.0
+                    ]
+                ],
+                "limits": {
+                    "max": 1000,
+                    "min": 0
+                },
+                "max_velocity": 10000,
+                "parent": null,
+                "role": "table_linear",
+                "sequence": 0,
+                "type": "linear"
+            },
+            "Y": {
+                "joint": [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0
+                    ]
+                ],
+                "limits": {
+                    "max": 600,
+                    "min": 0
+                },
+                "max_velocity": 10000,
+                "parent": null,
+                "role": "table_linear",
+                "sequence": 0,
+                "type": "linear"
+            },
+            "Z": {
+                "joint": [
+                    [
+                        0,
+                        0,
+                        0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0
+                    ]
+                ],
+                "limits": {
+                    "max": 300,
+                    "min": 0
+                },
+                "max_velocity": 10000,
+                "parent": null,
+                "role": "head_linear",
+                "sequence": 0,
+                "type": "linear"
+            }
+        },
+        "description": "Generic plasma table running the KineticNC / Beamicon2 control (cnc-step.com / Benezan Electronics). Travels match the 1000 x 600 x 300 mm envelope of the machines the deprecated KineticNCBeamicon2 post was written for; adjust them, the rapid rates and the pierce/cooling delays to match your table, torch and consumables before cutting.",
+        "kinematics": {
+            "base_frame": {
+                "orientation_quaternion": [
+                    0,
+                    0,
+                    0,
+                    1
+                ],
+                "origin": [
+                    0,
+                    0,
+                    0
+                ]
+            },
+            "dwo_supported": false,
+            "notes": "",
+            "rotation_strategy": "none",
+            "tcp_supported": false
+        },
+        "manufacturer": "",
+        "name": "Generic KineticNC Plasma",
+        "toolheads": [
+            {
+                "coolant_delay": 0.0,
+                "coolant_flood": false,
+                "coolant_mist": false,
+                "id": "toolhead1",
+                "max_power_kw": 0,
+                "max_rpm": 0,
+                "min_rpm": 0,
+                "name": "Plasma Torch",
+                "plasma_amperage": 45.0,
+                "tool_change": "none",
+                "toolhead_type": "plasma",
+                "toolhead_wait": 0.0
+            }
+        ],
+        "units": "metric"
+    },
+    "output": {
+        "comments": {
+            "enabled": true,
+            "include_blank_lines": false,
+            "include_operation_labels": true,
+            "output_bcnc_comments": false,
+            "symbol": "("
+        },
+        "duplicates": {
+            "commands": true,
+            "parameters": true
+        },
+        "formatting": {
+            "command_space": " ",
+            "end_of_line_chars": "\n",
+            "line_increment": 10,
+            "line_number_prefix": "N",
+            "line_number_start": 100,
+            "line_numbers": false
+        },
+        "header": {
+            "include_date": true,
+            "include_description": true,
+            "include_document_name": true,
+            "include_fixture_list": false,
+            "include_machine_name": true,
+            "include_project_file": false,
+            "include_tool_list": false,
+            "include_units": true,
+            "output_header": true
+        },
+        "output_tool_length_offset": false,
+        "precision": {
+            "axis": 3,
+            "feed": 3,
+            "spindle": 0
+        },
+        "remote_post": false,
+        "units": "metric"
+    },
+    "postprocessor": {
+        "file_name": "generic_plasma",
+        "properties": {
+            "file_extension": "ncc",
+            "postamble": "M05\nG17 G54 G90 G80 G40\nM30",
+            "preamble": "%\nG17 G54 G40 G49 G80 G90"
+        }
+    },
+    "processing": {
+        "assert_tool_prep": false,
+        "early_tool_prep": false,
+        "filter_inefficient_moves": true,
+        "split_arcs": false,
+        "tool_change_format": "m6_t",
+        "translate_drill_cycles": false,
+        "translate_rapid_moves": false,
+        "xy_before_z_after_tool_change": false
+    },
+    "version": 1
+}
